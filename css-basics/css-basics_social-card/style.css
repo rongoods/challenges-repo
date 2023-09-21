@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.pic {
+  border-radius: 10px;
+}
+
+.button {
+  color: blue;
+  background-color: white;
+  margin: 10px;
+}
+
+.account {
+  color: gray;
+  margin: 10px;
+}
+
+.title {
+  margin: 10px;
+}
+
+.short {
+  margin: 10px;
+}
