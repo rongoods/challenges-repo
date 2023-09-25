@@ -12,7 +12,7 @@
   <body>
     <header>
       <nav>
-        <ul>
+        <ul class="nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#" class="current">About</a></li>
@@ -22,7 +22,7 @@
     </header>
     <main>
       <section>
-        <h1>About</h1>
+        <h1 class="headline">About</h1>
         <p class="text" id="welcome-text">
           Welcome to your basic practice website! Enjoy your stay!
         </p>
@@ -32,7 +32,10 @@
         </p>
         <p class="text">
           This is another text element. It includes an
-          <a href="https://developer.mozilla.org/de/" target="_blank"
+          <a
+            href="https://developer.mozilla.org/de/"
+            target="_blank"
+            class="text__external-link"
             >external link</a
           >.
         </p>
@@ -42,10 +45,16 @@
           <li>This is a list item</li>
           <li>
             This is a list item
-            <ul class="list">
-              <li>This is a nested list item</li>
-              <li>This is a nested list item</li>
-              <li>This is a nested list item</li>
+            <ul class="list__list-nested">
+              <li class="list__list-nested__item">
+                This is a nested list item
+              </li>
+              <li class="list__list-nested__item">
+                This is a nested list item
+              </li>
+              <li class="list__list-nested__item">
+                This is a nested list item
+              </li>
             </ul>
           </li>
           <li>This is a list item</li>
@@ -60,8 +69,9 @@
       </section>
     </main>
     <footer>
-      <p class="text">
-        This is a text element in the footer with a <a href="/">link</a>.
+      <p class="text footer-paragraph">
+        This is a text element in the footer with a
+        <a href="/" class="text__footer-link">link</a>.
       </p>
     </footer>
   </body>
