@@ -48,10 +48,10 @@ the start of the introduction. */
 
 /* ==[ INTRODUCTION ]== */
 
-/* !-- In short: Look at the selectors, then scroll down to the bottom of the file. 
+/* !-- In short: Look at the selectors, then scroll down to the bottom of the file.
 Write your media queries there. --! */
 
-/* Hint 1: Investigate! Take a good, long look at the previews to find out 
+/* Hint 1: Investigate! Take a good, long look at the previews to find out
 which elements need to change at what point. It's always useful to change
 the size of your viewport or to take a look at the dev tools.
 Your solution doesn't need to be pixel-perfect. If it looks close enough,
@@ -239,15 +239,41 @@ fairly essential to completing this challenge. */
 /* ==[ MEDIA QUERIES & BREAKPOINTS ]== */
 
 /* Now it's your turn! Here we're using media queries to partially overwrite our
-CSS when certain conditions that we declare are met - such as a certain viewport 
+CSS when certain conditions that we declare are met - such as a certain viewport
 width, etc. */
 
 /* Media Query Tablet */
-/* --- */
-/* Replace this comment with your media query. */
+/* --- (min-width: 900px): medium, md, tablet --- */
+@media (min-width: 900px) {
+  .card-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .product-card,
+  .intro-text {
+    max-width: 40vw;
+  }
+}
 /* --- */
 
 /* Media Query Desktop */
-/* --- */
-/* Replace this comment with your media query. */
+/* --- (min-width: 1200px): large, lg, desktop --- */
+@media (min-width: 1200px) {
+  .--forest {
+    min-width: 100%;
+  }
+
+  .card-section {
+    justify-content: center;
+  }
+
+  .product-card,
+  .intro-text {
+    max-width: 45vw;
+  }
+
+  .intro-text {
+    align-self: flex-start;
+  }
+}
 /* --- */
