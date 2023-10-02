@@ -60,15 +60,27 @@ console.log(petsWithPush);
 
 const fruitsWithPop = ["apple", "banana", "mango"];
 
+fruitsWithPop.pop();
+
+console.log(fruitsWithPop);
+
 // EXERCISE 8
 // Put "hamster" onto the start of unshiftedPets variable by using the array method unshift.
 
 const unshiftedPets = ["dog", "cat", "rabbit"];
 
+unshiftedPets.unshift("hamster");
+
+console.log(unshiftedPets);
+
 // EXERCISE 9
 // Use the shift method to remove the first item from shiftedFruits.
 
 const shiftedFruits = ["apple", "banana", "mango"];
+
+shiftedFruits.shift([0]);
+
+console.log(shiftedFruits);
 
 export {
   exampleArray,
