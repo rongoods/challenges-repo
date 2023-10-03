@@ -71,7 +71,7 @@ console.log(ageOfThirdPerson);
 // EXERCISE 4
 // Change the value of the variable mothersNameOfSecondPerson to equal the mothers name of the second person.
 
-const mothersNameOfSecondPerson = people[1].parents.fathersName;
+const mothersNameOfSecondPerson = people[1].parents.mothersName;
 
 console.log(mothersNameOfSecondPerson);
 
