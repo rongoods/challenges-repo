@@ -55,7 +55,11 @@ const nameOfFirstPerson = "change me";
 // EXERCISE 2
 // Change the value of the variable homersOtherFriends to equal the other friends of Homer.
 
-const homersOtherFriends = "change me";
+// let homersOtherFriends = "change me";
+
+let homersOtherFriends = [people[1].name, people[2].name, people[3].name];
+
+console.log(homersOtherFriends);
 
 // EXERCISE 3
 // Change the value of the variable ageOfThirdPerson to equal the age of the third person.
