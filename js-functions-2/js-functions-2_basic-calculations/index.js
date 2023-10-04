@@ -12,22 +12,32 @@ They should return the result of the respective calculation:
 
 function add(a, b) {
   // Code here
+  const sum = a + b;
+  return sum;
 }
 
 function subtract(a, b) {
   // Code here
+  const sub = a - b;
+  return sub;
 }
 
 function multiply(a, b) {
   // Code here
+  const mult = a * b;
+  return mult;
 }
 
 function divide(a, b) {
   // Code here
+  const div = a / b;
+  return div;
 }
 
 function remainder(a, b) {
   // Code here
+  const rem = a % b;
+  return rem;
 }
 
 /*
