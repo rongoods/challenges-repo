@@ -28,6 +28,7 @@ body {
   color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transition: box-shadow 500ms;
 }
 
 .start-button:disabled {
@@ -35,6 +36,12 @@ body {
   color: grey;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.start-button:active {
+  background-color: rgb(71, 212, 94);
+  color: white;
+  box-shadow: red 50px 50px 50px;
 }
 
 /* Toast */
@@ -49,12 +56,30 @@ body {
   background: rgb(71, 212, 94);
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-
+  /* transform: scale(1);
+  animation: pulse 1s infinite; */
   transition: transform 0.5s;
 }
 
 .toast--hidden {
   transform: translate3d(-150%, 0, 0);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
 
 /* Countdown */
@@ -64,11 +89,16 @@ body {
   bottom: 0;
   left: 0;
   height: 5px;
-  background-color: black;
+  background-color: rgb(255, 0, 0);
 
   opacity: 0;
   width: 100%;
   transition: opacity 0.25s;
+
+  box-shadow: rgba(255, 0, 0, 0.12) 0px 1px 3px,
+    rgba(255, 0, 0, 0.24) 0px 1px 2px;
+  transform: scale(1);
+  animation: pulse 500ms infinite;
 }
 
 .countdown--visible {
