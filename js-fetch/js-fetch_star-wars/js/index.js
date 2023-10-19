@@ -37,10 +37,29 @@ const EXAMPLE_DATA = {
 const firstCard = Card(EXAMPLE_DATA);
 renderElement(firstCard);
 
-fetchDataAndRender();
+// fetchDataAndRender();
 
 // --v-- your code below this line --v--
+const url = "https://swapi.dev/api/people";
 
-function fetchDataAndRender() {
-  fetch(); // ?
+async function fetchDataAndRender() {
+  try {
+    const response = await fetch(url);
+    if (response.ok) {
+      const data = await response.json();
+      //   return data;
+      data.results.forEach((person) => {
+        const moooooreCards = Card(person);
+        renderElement(moooooreCards);
+      });
+    } else {
+      console.log("this is bad..");
+    }
+  } catch (error) {
+    console.error("this looks like an error!");
+  }
 }
+
+console.log(fetchDataAndRender());
+
+const forCards = JSON.stringify(url);
