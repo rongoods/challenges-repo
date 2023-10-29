@@ -1,11 +1,9 @@
-import Card from "./components/Card";
+import Fruits from "./components/Fruits";
 
 export default function App() {
-  const fruits = [];
-
   return (
     <div className="app">
-      <Card name="🍌 banana" />
+      <Fruits />
     </div>
   );
 }
