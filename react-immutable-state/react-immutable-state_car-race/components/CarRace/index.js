@@ -15,10 +15,47 @@ export default function CarRace() {
   const [cars, setCars] = useState(initialCars);
 
   function moveCar(clickedCar) {
-    const coveredDistance = getRandomDistance();
-    console.log("clickedCar", clickedCar);
-    console.log("coveredDistance", coveredDistance);
+    // const coveredDistance = getRandomDistance();
+    // console.log("clickedCar", clickedCar);
+    // console.log("coveredDistance", coveredDistance);
+
+    setCars((prevDistances) => {
+        return prevDistances.map((prevDistance) => {
+            if (prevDistance.lastDistance !== prevDistance){
+                return prevDistance;
+            }
+            return {
+                ...prevDistance, 
+                distances: prevDistance.
+            }
+        })
+    })
   }
+
+      // setSeasons((prevSeasons) => {
+    //   return prevSeasons.map((prevSeason) => {
+    //     if (prevSeason.number !== seasonNumber) {
+    //       return prevSeason;
+    //     }
+    //     return {
+    //       ...prevSeason,
+    //       episodes: prevSeason.episodes.map((prevEpisode) => {
+    //         if (prevEpisode.number !== episodeNumber) {
+    //           return prevEpisode;
+    //         }
+    //         return {
+    //           ...prevEpisode,
+    //           hasSeen: !prevEpisode.hasSeen,
+    //         };
+    //       }),
+    //     };
+    //   });
+    // });
+
+
+
+
+
 
   const winner = cars.find((car) => car.position.x >= finishLine);
 
